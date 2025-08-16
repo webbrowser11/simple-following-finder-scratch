@@ -16,7 +16,8 @@ def index():
             user = sa.get_user(user_input)
             user_input = user.following_count()
         except Exception as e:
-            user_input = f"User does not exist or another error.<br>Error info: {str(e)}"
+            user_input = f"User does not exist or another error."
         output = f"{user_input}"
     return render_template("index.html", output=output)
+
 
