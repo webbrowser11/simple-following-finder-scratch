@@ -11,9 +11,10 @@ def index():
         try:
             user = sa.get_user(user_input)
             user_input = user.following_count()
-        except Exception:
-            user_input = "User does not exist or another error./nError info: {e}"
+        except Exception as e:
+            user_input = "User does not exist or another error.\nError info: {e}"
         output = f"{user_input}"
     return render_template("index.html", output=output)
+
 
 
