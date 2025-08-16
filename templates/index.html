@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask ScratchAttach</title>
+</head>
+<body>
+    <form method="POST">
+        <input type="text" name="my_input" placeholder="Type a Scratch username" required>
+        <button type="submit">Send</button>
+    </form>
+
+    {% if output %}
+    <div class="output">
+        {{ output }}
+    </div>
+    {% endif %}
+</body>
+</html>
