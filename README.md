@@ -1,1 +1,1 @@
-`https://simple-following-finder-scratch.vercel.app/templates/index.html`
+https://simple-following-finder-scratch.vercel.app/templates/index.html
