@@ -13,5 +13,6 @@ def index():
             user_input = user.following_count()
         except Exception:
             user_input = "User does not exist or another error."
-        output = f"You typed: {user_input}"
+        output = f"{user_input}"
     return render_template("index.html", output=output)
+
