@@ -3,6 +3,10 @@ import scratchattach as sa
 
 app = Flask(__name__, template_folder="../templates")
 
+@app.route("/static/favicon.ico")
+def favicon():
+    return app.send_static_file("favicon.ico")
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     output = None
@@ -15,3 +19,4 @@ def index():
             user_input = f"User does not exist or another error.<br>Error info: {str(e)}"
         output = f"{user_input}"
     return render_template("index.html", output=output)
+
